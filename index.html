@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Sumanth Reddy</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -11,77 +11,81 @@
 
 
 <!-- --------------java script ------- -->
+<!-- 
 <script>
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  var pic = document.querySelectorAll("#pic");
-  var reveal = document.querySelectorAll(".reveal");
-  var about = document.querySelectorAll("#about");
+
+// function reveal() {
+//   var reveals = document.querySelectorAll(".reveal");
+//   var pic = document.querySelectorAll("#pic");
+//   var reveal = document.querySelectorAll(".reveal");
+//   var about = document.querySelectorAll("#about");
 
 
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+//   for (var i = 0; i < reveals.length; i++) {
+//     var windowHeight = window.innerHeight;
+//     var elementTop = reveals[i].getBoundingClientRect().top;
+//     var elementVisible = 150;
 
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
-  }
+//     if (elementTop < windowHeight - elementVisible) {
+//       reveals[i].classList.add("active");
+//     } else {
+//       reveals[i].classList.remove("active");
+//     }
+//   }
 
-  for (var i = 0; i < pic.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = pic[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+//   for (var i = 0; i < pic.length; i++) {
+//     var windowHeight = window.innerHeight;
+//     var elementTop = pic[i].getBoundingClientRect().top;
+//     var elementVisible = 150;
 
-    if (elementTop < windowHeight - elementVisible) {
-      pic[i].classList.add("active");
-    } else {
-      pic[i].classList.remove("active");
-    }
-  }
+//     if (elementTop < windowHeight - elementVisible) {
+//       pic[i].classList.add("active");
+//     } else {
+//       pic[i].classList.remove("active");
+//     }
+//   }
 
   
-  for (var i = 0; i < reveal.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveal[i].getBoundingClientRect().top;
-    var elementVisible = 150;
+//   for (var i = 0; i < reveal.length; i++) {
+//     var windowHeight = window.innerHeight;
+//     var elementTop = reveal[i].getBoundingClientRect().top;
+//     var elementVisible = 150;
 
-    if (elementTop < windowHeight - elementVisible) {
-      reveal[i].classList.add("active");
-    } else {
-      reveal[i].classList.remove("active");
-    }
-  }
+//     if (elementTop < windowHeight - elementVisible) {
+//       reveal[i].classList.add("active");
+//     } else {
+//       reveal[i].classList.remove("active");
+//     }
+//   }
 
 
     
 
-}
+// }
 
-window.addEventListener("scroll", reveal);
+// window.addEventListener("scroll", reveal);
 
-    function fun(str1){
-        var s1=document.getElementsByClassName('items')
-        if (str1=='about'){
-            window.location='about.html'
-        }else 
-        if (str1=='index'){
-            window.location='index.html'
-        }else
-        if (str1=='Skills'){
-            window.location='skills.html'
-        }else
-        if (str1=='contact'){
-            window.location='contact.html'
-        }else
-        if (str1=='portfolio'){
-            window.location='portfolio.html'
-        }
-    }
-</script>
+//     function fun(str1){
+//         var s1=document.getElementsByClassName('items')
+//         if (str1=='about'){
+//             window.location='about.html'
+//         }else 
+//         if (str1=='index'){
+//             window.location='index.html'
+//         }else
+//         if (str1=='Skills'){
+//             window.location='skills.html'
+//         }else
+//         if (str1=='contact'){
+//             window.location='contact.html'
+//         }else
+//         if (str1=='portfolio'){
+//             window.location='portfolio.html'
+//         }
+//     }
+// </script> -->
+
+
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 <script type="text/javascript">
     function sendEmail() {
@@ -89,23 +93,27 @@ window.addEventListener("scroll", reveal);
         var your_email = document.getElementById("your_email").value;
         var subject = document.getElementById("subject").value;
         var description = document.getElementById("description").value;
-        console.log(your_name)
-
+        var phno=document.getElementById("phno").value;
+        console.log(typeof(your_email));
         if (your_name.length !== 0){
-            if (your_email.length !== 0){
+            if (your_email.length !== 0 && your_email.includes('@') && your_email.includes('.')){
                 if (subject.length !== 0){
                     if (description.length !== 0){
+                        if (phno.length <= 10){
                         
                         Email.send({
                             SecureToken : "fdf2d17c-b33e-484d-86e9-1d92f2786a1e",
                             To: "bommu7997@gmail.com",
                             From: "yr257034@gmail.com",
                             Subject: subject,
-                            Body: 'Name: ' + your_name +'  E-Mail:  '+your_email + '<br>Message: ' + description,
+                            Body: 'Name: ' + your_name +'  E-Mail:  '+your_email + '<br>Message: '+'\nPhone Number: '+phno +'\nDescription: '+ description,
                             }).then(
                                 message => alert(message),
                             );
-
+                        }
+                        else{
+                            alert("Please Enter Valid Phone Number")
+                        }
                     }else{
                         alert("Please Enter Description")
                     }
@@ -134,8 +142,6 @@ window.addEventListener("scroll", reveal);
         <a href="#projects" class="items">Projects</a>
         <!-- <a href="#certifications" class="items">Certifications</a> -->
         <a href="#contact" class="items">Contacts</a>
-
-       
     </div>
 
 <!-- ----------navbar title ended----------- -->
@@ -149,7 +155,7 @@ window.addEventListener("scroll", reveal);
             <div id="about">
                 <h4><b>Hi, It's Me</b></h4> <br>
                 <h1>P SUMANTH REDDY</h1>
-                I'm an aspiring data scientist with a strong foundation in data analysis and a B.Tech degree. 
+                I'm an aspiring <span>Data Scientist</span> with a strong foundation in data analysis and a B.Tech degree. 
                 I'm eager to apply my skills to extract actionable insights from data and drive data-driven decisions in a dynamic role.
             </div>
             <div class="socials">
@@ -178,12 +184,12 @@ window.addEventListener("scroll", reveal);
 
 <!-- ---------about -------- -->
 
-<h1 id="me" class="reveal">About</h1>
+<h1 id="me" class="hh11">About</h1>
 <div class="about" >
     <div id="pic">
         <div id="about">
             <div id="center">
-                <p>  I am Sumanth Reddy, a recent B.Tech graduate with practical experience in data analysis through projects like "Pizza Sales Analysis" 
+                <p>  I am <span>P Sumanth Reddy</span>, a recent B.Tech graduate with practical experience in data analysis through projects like "Pizza Sales Analysis" 
                     and "Employee Attendance Analysis" during my training with Learnbay.
                     I'm eager to apply my skills and knowledge in a data science or data analysis role, ready to contribute and grow in the field.
          </p>
@@ -199,7 +205,7 @@ window.addEventListener("scroll", reveal);
 
 <!-- --------------skills ------------- -->
 
-<h1 id="skill" class="reveal">Skills</h1>
+<h1 id="skill" class="hh11">Skills</h1>
 <div  class="skills" id="skills" >
 
     <div class="reveal">Python</div>
@@ -221,13 +227,15 @@ window.addEventListener("scroll", reveal);
 <!-- ---------------internship------------------ -->
 
 
-<h1 id="internship" class="reveal">Internships</h1>
+<h1 id="internship" class="hh11">Internships</h1>
 <div  class="internship" id="internships">
 
-    <div class="reveal">CodSoft internship offer Letter<a href="codsoft.pdf" id="download"><button id="hide">download file</button></a></div>
-    <div class="reveals">Psyliq internship offer Letter<a href="Psyliq.pdf" id="download"><button id="hide">download file</button></a></div>
-    <div class="reveal">lets grow more internship offer Letter<a href="lets_grow_more.pdf" id="download"><button id="hide">download file</button></a></div>
-    <div class="reveal">Bharat internship offer Letter<a href="Bharat_intern.pdf" id="download"><button id="hide">download file</button></a></div>
+    <div class="inte">CodSoft internship offer Letter
+        <a href="codsoft.pdf"  class="download"><button >Download File</button></a>
+    </div>
+    <div class="inte">Psyliq internship offer Letter<a href="Psyliq.pdf" class="download"><button >Download File</button></a></div>
+    <div class="inte">lets grow more internship offer Letter<a href="lets_grow_more.pdf" class="download"><button >Download File</button></a></div>
+    <div class="inte">Bharat internship offer Letter<a href="Bharat_intern.pdf"  class="download"><button >Download File</button></a></div>
    
 </div>
 
@@ -252,8 +260,8 @@ window.addEventListener("scroll", reveal);
 <!-- -----------------projects ------------- -->
 
 <div class="projects" id="projects">
-<h1 class="reveal" id="project_title">Projects</h1>
-<h1 class="reveal">Internship Projects</h1>
+<h1 class="hh11" id="project_title">Projects</h1>
+<h1 class="hh11">Internship Projects</h1>
 <div class="internship">
     <div class="inter">
         <h3> Fraud Detection Project Summary</h3>
@@ -288,7 +296,7 @@ window.addEventListener("scroll", reveal);
 
 
 </div>
-<h1 class="reveal">Personal Projects</h1>
+<h1 class="hh11">Personal Projects</h1>
 <div class="personal">
     <div class="inter">
         <h3>Pizza Sales Analytics</h3>
@@ -314,15 +322,7 @@ window.addEventListener("scroll", reveal);
 
     </div>
     </div>
-
-
 </div> 
-    
-    
-
-
-
-
 </div>
 
 <!-- --------------------projects ended--------------- -->
@@ -350,23 +350,25 @@ window.addEventListener("scroll", reveal);
 
 
 <!-- -----------------contact details ------------------>
-<h1 id="contact" class="reveal">Contact Details</h1>
+<h1 id="contact" class="hh11">Contact Details</h1>
     <form method="post" class="form" action="#">
         <div>
             <input type="text" id="your_name" placeholder="your name" name="your_name" required>
-        </div>
-        <div>
+        
+        
             <input type="email" id="your_email" placeholder="your E-mail" name="your_email" required>
+        </div>
         <div>
             <input type="text" id="subject" placeholder="Subject" name="subject" required>
+            <input type="number" id="phno" placeholder="Phone number" name="phno"  required>
         </div>
-        <div>
+        
             <textarea rows="10" cols="40" id="description" placeholder="Description" name="description" required></textarea>
-        </div>
+        
 
-        <div>
-            <input type="button" id="submit" value="submit"  onclick="sendEmail()" />
-        </div>
+        
+            <input type="button" id="submit" value="Submit"  onclick="sendEmail()" />
+       
     </form>
 <!-- ----------contact details ended ------------- -->
 
@@ -381,7 +383,23 @@ window.addEventListener("scroll", reveal);
     <div class="footer">
         &copy; 2023 SUMANTH ALL RIGHTS RESERVED.
     </div>
-
+    
 <!-- -----------------footer ended --------------- -->
+
+
+<!-- ----------------scripts -------------------- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+      integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js"></script>
 </body>
 </html>
