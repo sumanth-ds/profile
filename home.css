@@ -46,6 +46,7 @@ html{
     justify-content: center;
 }
 
+
 body{
   background: linear-gradient(15deg,#dfb11ac5,#64f105d2,#03e9ddbb,#0447ffb6,#ff01f2b7,#ec0020a9);
   /* background: linear-gradient(to left,
@@ -445,14 +446,17 @@ h1{
 
 
 #skills div{
+  
   border:1px solid rgb(5, 183, 242);
   padding:20%;
   height:5rem;
   width: 67%;
   font-weight: 1000;
+  font-weight: 1100;
   font-size: 2vw;
   border-radius: 5%;
   text-align: center;
+  position: relative;
   transform: scale(0.9);
   transition: 0.3s linear;
   border: none;
@@ -464,7 +468,7 @@ h1{
 
 #skills div:hover{
   transform: scale(1);
-  background-color: #fec86a;
+  background-color: greenyellow;
   color: black;
 
 }
@@ -572,8 +576,8 @@ h1{
 }
 
 #internships div a button:hover{
-  background-color: rgb(0, 255, 221);
-  box-shadow: -0.3ch -0.3ch 1ch 0.3ch blue;
+  background-color: blue;
+  box-shadow: 0px 0px 10px blue;
   box-shadow: 0.3ch 0.3ch 1ch 0.3ch blue;
 
   border: none;
@@ -581,9 +585,7 @@ h1{
 
 #internships div:hover{
   transform: scale(1);
-  background-color: #fec86a;
-  color: black;
-
+ background-color: greenyellow;
 }
 .internship div .download{
   visibility :hidden;
@@ -1011,10 +1013,6 @@ width:5%;
   #pic img{
     height: 50%;
     width: 40%;
-  }
-  .internship .inte a{
-    visibility :visible;
-    text-decoration: none;
   }
 
 }

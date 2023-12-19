@@ -26,14 +26,14 @@ const dow=document.querySelectorAll(".internship .inte");
       const skil=document.querySelectorAll("#skills div:nth-child(even)");
       skil.forEach(function(val){
         gsap.from(val, {
-            x:-800,
+            x:-900,
     
             scrollTrigger: {
               trigger: ".skills",
               scroller: "body",
             //   markers:true,
-              start: "top 70%",
-              end: "top 45%",
+              start: "top 90%",
+              end: "top 55%",
               scrub: 1,
             },
           });
