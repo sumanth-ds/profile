@@ -32,8 +32,8 @@ const dow=document.querySelectorAll(".internship .inte");
               trigger: ".skills",
               scroller: "body",
             //   markers:true,
-              start: "top 63%",
-              end: "top 55%",
+              start: "top 90%",
+              end: "top 75%",
               scrub: 1,
             },
           });
@@ -47,8 +47,8 @@ const dow=document.querySelectorAll(".internship .inte");
               trigger: ".skills",
               scroller: "body",
             //   markers:true,
-              start: "top 68%",
-              end: "top 25%",
+              start: "top 90%",
+              end: "top 75%",
               scrub: 1,
             },
           });
