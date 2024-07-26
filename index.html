@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumanth Reddy</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+
+<!-- --------------java script ------- -->
+<!-- 
+<script>
+
+// function reveal() {
+//   var reveals = document.querySelectorAll(".reveal");
+//   var pic = document.querySelectorAll("#pic");
+//   var reveal = document.querySelectorAll(".reveal");
+//   var about = document.querySelectorAll("#about");
+
+
+//   for (var i = 0; i < reveals.length; i++) {
+//     var windowHeight = window.innerHeight;
+//     var elementTop = reveals[i].getBoundingClientRect().top;
+//     var elementVisible = 150;
+
+//     if (elementTop < windowHeight - elementVisible) {
+//       reveals[i].classList.add("active");
+//     } else {
+//       reveals[i].classList.remove("active");
+//     }
+//   }
+
+//   for (var i = 0; i < pic.length; i++) {
+//     var windowHeight = window.innerHeight;
+//     var elementTop = pic[i].getBoundingClientRect().top;
+//     var elementVisible = 150;
+
+//     if (elementTop < windowHeight - elementVisible) {
+//       pic[i].classList.add("active");
+//     } else {
+//       pic[i].classList.remove("active");
+//     }
+//   }
+
+  
+//   for (var i = 0; i < reveal.length; i++) {
+//     var windowHeight = window.innerHeight;
+//     var elementTop = reveal[i].getBoundingClientRect().top;
+//     var elementVisible = 150;
+
+//     if (elementTop < windowHeight - elementVisible) {
+//       reveal[i].classList.add("active");
+//     } else {
+//       reveal[i].classList.remove("active");
+//     }
+//   }
+
+
+    
+
+// }
+
+// window.addEventListener("scroll", reveal);
+
+//     function fun(str1){
+//         var s1=document.getElementsByClassName('items')
+//         if (str1=='about'){
+//             window.location='about.html'
+//         }else 
+//         if (str1=='index'){
+//             window.location='index.html'
+//         }else
+//         if (str1=='Skills'){
+//             window.location='skills.html'
+//         }else
+//         if (str1=='contact'){
+//             window.location='contact.html'
+//         }else
+//         if (str1=='portfolio'){
+//             window.location='portfolio.html'
+//         }
+//     }
+// </script> -->
+
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script type="text/javascript">
+    function sendEmail() {
+        var your_name = document.getElementById("your_name").value;
+        var your_email = document.getElementById("your_email").value;
+        var subject = document.getElementById("subject").value;
+        var description = document.getElementById("description").value;
+        var phno=document.getElementById("phno").value;
+        console.log(typeof(your_email));
+        if (your_name.length !== 0){
+            if (your_email.length !== 0 && your_email.includes('@') && your_email.includes('.')){
+                if (subject.length !== 0){
+                    if (description.length !== 0){
+                        if (phno.length <= 10){
+                        
+                        Email.send({
+                            SecureToken : "fdf2d17c-b33e-484d-86e9-1d92f2786a1e",
+                            To: "bommu7997@gmail.com",
+                            From: "yr257034@gmail.com",
+                            Subject: subject,
+                            Body: 'Name: ' + your_name +'  E-Mail:  '+your_email + '<br>Message: '+'\nPhone Number: '+phno +'\nDescription: '+ description,
+                            }).then(
+                                message => alert(message),
+                            );
+                        }
+                        else{
+                            alert("Please Enter Valid Phone Number")
+                        }
+                    }else{
+                        alert("Please Enter Description")
+                    }
+                }else{
+                    alert("Please Enter Subject")
+                }
+            }else{
+                    alert("Please Enter Email-id")
+                }
+        }else{
+                    alert("Please Enter Your Name")
+                }
+    }
+</script>
+<!-- ------------javascript ended  -->
+
+</head>
+<body>
+
+
+<!-- -------navbar title --------- -->
+    <div id="head">
+        <a href="#home" class="items">Home</a>
+        <!-- <a href="#me" class="items">About</a> -->
+        <a href="#skill"class="items">Skills</a>
+        <a href="#internship" class="items">Internships</a>
+        <a href="#projects" class="items">Projects</a>
+        <a href="#certifications" class="items">Certifications</a>
+        <!-- <a href="#contact" class="items">Contact</a> -->
+    </div>
+
+<!-- ----------navbar title ended----------- -->
+
+
+
+<!-- ------------home page -------------- -->
+    <div id="home" >
+        <div id="pic">
+            <img src="pic.png">
+            <div id="about">
+                <h4><b>Hi, It's Me</b></h4> <br>
+                <h1>P SUMANTH REDDY</h1>
+          
+                Dedicated and results-driven <span>Data Scientist Professional</span> with hands-on experience gained through an internship at Learnbay. 
+                Skilled in data collection, cleaning, and exploratory data analysis to uncover actionable insights. 
+                Proficient in developing and deploying machine learning models to solve real-world problems. 
+                Adept at collaborating with cross-functional teams and effectively communicating findings to stakeholders. 
+                Committed to leveraging data-driven solutions to drive business success.
+
+
+            </div>
+            <div class="socials">
+                <div class="line"></div>
+                    <a href="https://www.linkedin.com/in/psumanth/"><i class="ri-linkedin-fill"></i></a>
+                    <a href="https://github.com/sumanth-ds"><i class="ri-github-fill"></i></a>
+            </div>
+               
+        </div>
+    </div>
+  
+     <!-- ----------home page ended ----------- -->
+     
+    <!-- ------------name and cv ---------- -->
+    <div id="name" >
+        <div>P SUMANTH REDDY</div>
+        <a href="SUMANTH.pdf" id="download"><button id="download_style">Download CV</button></a>
+     
+    </div>
+  
+    <!-- ------------name and cv ended ---------- -->
+
+
+<!-- ---------about -------- -->
+
+<!-- <h1 id="me" class="hh11">About</h1>
+<div class="about" >
+    <div id="pic">
+        <div id="about">
+            <div id="center">
+                Dedicated and enthusiastic Data Science professional with 1 year of hands-on experience as a Trainee at Learnvista Private Limited.
+                 Possess a strong educational background with a B.Tech in Computer Science and Engineering.
+                  Proficient in various data science skills including data analysis, machine learning, statistical modeling, and data visualization. 
+                  Successfully completed projects demonstrating ability to derive actionable insights from data.
+                 Highly motivated and passionate about leveraging data science to solve complex problems and drive business value.
+                <p>  I am <span>P Sumanth Reddy</span>, a recent B.Tech graduate with practical experience in data analysis through projects like "Pizza Sales Analysis" 
+                    and "Employee Attendance Analysis" during my training with Learnbay.
+                    I'm eager to apply my skills and knowledge in a data science or data analysis role, ready to contribute and grow in the field.
+         </p>
+         
+             </div>
+        </div>
+        <img src="pic.png">
+    </div>
+</div>
+   -->
+<!-- -------------about ended ---------- -->
+
+
+<!-- --------------skills ------------- -->
+
+<h1 id="skill" class="hh11">Skills</h1>
+<div  class="skills" id="skills" >
+
+    <div class="reveals">Programming Language <div id = skillsubtitle>(Python Programming) </div></div>
+    <div class="reveals">Preprocessing<div id = skillsubtitle>(Numpy , Pandas) </div></div>
+    <div class="reveals">Data Visualization <div id = skillsubtitle>(Matplotlib, seaborn, Power BI, Tabluea)</div> </div>
+    <div class="reveals">DataBase <div id = skillsubtitle>(SQL, Mongodb)</div></div>
+    <div class="reveals">Statistics<div id = skillsubtitle>(Discriptive Statistics & Inferencial Statistics) </div></div>
+    <div class="reveals">Machine Learning<div id = skillsubtitle>(Supervied Learning & Unsupervied Learning) </div></div>
+    <div class="reveals">Time Serie</div>
+    <div class="reveals">Natural Language Processing (NLP) </div>
+    <div class="reveals">Deep Learning</div>
+    <div class="reveals">Model Deployment</div>
+</div>
+<!-- ----------------skills ended--------------- -->
+ 
+
+
+
+
+
+
+<!-- ---------------internship------------------ -->
+
+<h1 id="internship" class="hh11">Internship</h1>
+<div  class="internship" id="internships">
+    <div id = 'intern'>
+        <p>
+            <img id='learnbay' src="OIP.jpeg">
+            <a href="https://www.learnbay.co/"><h2>Learnbay intern</h2></a>
+            <span>Duration :</span> 07/2023 - Present <br>
+            <span>Mode :</span> Virtual <br>
+            <p>
+                During my internship at Learnbay, I gained practical experience in data science by solving real-world problems and deploying solutions.
+                
+            </p>
+            <p>
+                <span>My responsibilities included:</span>
+            </p>
+            <p>
+                <span>Data Collection and Cleaning:</span> Collected and preprocessed data from various sources to ensure quality and accuracy.
+
+            </p>
+
+            <p>
+                <span>Exploratory Data Analysis (EDA):</span> Performed EDA to uncover patterns, correlations, and insights to guide further analysis.
+
+            </p>
+            <p>
+                <span>Model Development:</span> Developed and fine-tuned machine learning models to predict outcomes and solve specific business problems.
+
+            </p>
+
+            <p>
+               <span> Deployment:</span> Implemented machine learning models into production environments, ensuring they were scalable and maintained their performance.
+
+            </p>
+            <p>
+               <span> Collaboration:</span> Worked closely with cross-functional teams to understand project requirements and deliver data-driven solutions.
+
+            </p>
+            <p>
+                <span>Presentation:</span> Communicated findings and insights to stakeholders through comprehensive reports and visualizations.
+
+            </p>
+            
+            This hands-on experience equipped me with the skills to tackle complex data challenges and deliver impactful solutions in a professional setting.
+
+        </p>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- 
+<h1 id="internship" class="hh11">Internships Offer Letters</h1>
+<div  class="internship" id="internships">
+
+    <div class="inte">CodSoft 
+        <a href="codsoft.pdf"  class="download"><button >Download File</button></a>
+    </div>
+    <div class="inte">Psyliq<a href="Psyliq.pdf" class="download"><button >Download File</button></a></div>
+    <div class="inte">lets grow more <a href="lets_grow_more.pdf" class="download"><button >Download File</button></a></div>
+    <div class="inte">Bharat <a href="Bharat_intern.pdf"  class="download"><button >Download File</button></a></div>
+   
+</div> -->
+
+
+
+
+<!-- <h1 id="internship" class="reveal">Internships</h1>
+<div class="internship" >
+ <div class="img">
+    <img src="codsoft.jpg" alt="">
+    <img src="Psyliq.jpg" alt="">
+    <img src="lets_grow_more.jpg" alt="">
+
+ </div>
+</div> -->
+
+<!-- -------------intership ended ---------- -->
+
+
+
+
+
+
+
+
+<!-- --------------------End-to-end projects star--------------- -->
+
+<div class="projects" id="projects">
+    <h1 class="hh11" id="end_to_end_project_title">End-To-End Projects</h1>
+    <h1 class="hh11">Claim Prediction Projects</h1>
+
+    <div id="end_to_end">
+        
+        <img id="claim_image" src="claim_image.webp" >
+        <p>
+        Develop a predictive model that assesses the claim probability for car insurance policies. 
+        The objective would be to understand the factors that influence claim frequency and severity in the period of six months and enable insurance companies to better assess risk and determine appropriate premiums for policyholders.
+
+<div>
+    <span>Technologies Used:</span> Python, Machine Learning, Django, Html, css, javascript.
+</div>
+
+<div>
+    <span>Key Features:</span> Developed a predictive Machine Learning model that estimates the likelihood of an insurance claim.
+</div>
+
+<div>
+    <span>Achievements:</span> Enabled client to reduce overspending by 25% on average.
+
+</div>
+        </p>
+        <div id="flex">
+            <a href="claim_prediction.html" target="_blank"><button>Open Project</button></a>
+            <a href="https://github.com/sumanth-ds/Claim-prediction" target="_blank"><button>Open GitHub Link</button></a>
+        </div>
+    
+    </div>
+</div>
+
+<!-- --------------------End-to-end projects ended--------------- -->
+
+
+
+
+
+
+
+<!-- -----------------projects ------------- -->
+
+<div class="projects" id="projects">
+<h1 class="hh11" id="project_title">Project experience</h1>
+<h1 class="hh11">Data Science Projects</h1>
+<div class="internship">
+    <div class="inter">
+        <h3>Churn Modeling</h3>
+        <p>
+            <img id="claim_image" src="Churn-Prediction-Model.jpg" >
+            <p>
+                
+                <span>Description:</span> Developed a predictive churn model using Python and scikit-learn to identify at-risk customers, 
+                improving retention by 15% through targeted marketing strategies.
+            </p>
+            <p>
+                <span>Technologies Used:</span> Python, scikit-learn, pandas, NumPy and Matplotlib.
+
+            </p>
+           <p>
+            <span>Key Features:</span> Data Preprocessing, Feature Engineering, Model Training and Evaluation.
+
+           </p> 
+           
+           <p>
+            <span>Achievements:</span> Achieved a 15% improvement in customer retention and reduced churn prediction error by 10%.
+           </p>
+        </p>
+        <a href="https://github.com/sumanth-ds/Supervised-ml-projects/tree/main/Classification/Chrum%20Dataset" target="_blank"><button>Open GitHub Link</button></a>
+
+    </div>
+    <div class="inter">
+        <h3> Attrition prediction</h3>
+        <img id="claim_image" src="attrition.jpg" >
+        <p>
+            <span>Description:</span> Developed an attrition prediction model using the Attrition dataset to identify employees at risk of leaving and enhance retention strategies.
+        </p>
+        <p>
+            <span>Technologies Used:</span> Python, scikit-learn, pandas, NumPy and Matplotlib.
+
+        </p>
+       <p>
+        <span>Key Features:</span> Data Preprocessing, Feature Engineering, Model Training and Evaluation.
+
+       </p> 
+       
+       <p>
+        <span>Achievements:</span> Achieved 85% prediction accuracy and highlighted key factors influencing employee turnove.
+       </p>
+    </p>
+        <a href="https://github.com/sumanth-ds/Supervised-ml-projects/tree/main/Classification/Attrition_prediction" target="_blank"><button>Open GitHub Link</button></a>
+
+    </div>
+    <div class="inter">
+        <h3>Car Price Prediction</h3>
+        <p>
+            <img id="claim_image" src="car price prediction.jpg" >
+            <p>
+                <span>Description:</span> Developed a car price prediction model using the Car Price Prediction dataset to estimate vehicle values based on features like make, model, and mileage.
+            </p>
+            <p>
+                <span>Technologies Used:</span> Python, scikit-learn, pandas, NumPy and Matplotlib.
+
+            </p>
+           <p>
+            <span>Key Features:</span> Data Preprocessing, Feature Engineering, Model Training and Evaluation.
+
+           </p> 
+           
+           <p>
+            <span>Achievements:</span>Achieved a prediction accuracy of 90% and provided insights into factors affecting car prices.
+           </p>
+
+        </p>
+        <a href="https://github.com/sumanth-ds/Supervised-ml-projects/tree/main/Regression/Car_Price_Prediction" target="_blank"><button>Open GitHub Link</button></a>
+    </div>
+
+    <div class="inter">
+        <h3>Housing Price Prediction</h3>
+        <p>
+            <img id="claim_image" src="House price prediction.jpeg" >
+            <p>
+                <span>Description:</span> Developed a housing price prediction model to estimate property values based on features like location, size, and amenities.
+            </p>
+            <p>
+                <span>Technologies Used:</span> Python, scikit-learn, pandas, NumPy and Matplotlib.
+
+            </p>
+           <p>
+            <span>Key Features:</span> Data Preprocessing, Feature Engineering, Model Training and Evaluation.
+
+           </p> 
+           
+           <p>
+            <span>Achievements:</span>Achieved 90% prediction accuracy and improved valuation precision for real estate investments.
+           </p>
+
+        </p>
+        <a href="https://github.com/sumanth-ds/Supervised-ml-projects/tree/main/Regression/Housing_Price_Dataset" target="_blank"><button>Open GitHub Link</button></a>
+    </div>
+
+
+</div>
+
+
+<h1 class="hh11">Data Analytics Projects</h1>
+<div class="internship">
+    <div class="inter">
+        <h3>Pizza Sales Analytics</h3>
+        <img src="PIZZA_1.png" alt="">
+        <img src="PIZZA_2.png" alt="">
+
+        <p>This project analyzes pizza sales data to derive insights into total revenue, top-selling pizzas, 
+            and sales trends by size, month, day, and hour. Utilizing transaction records, pizza menu details, 
+            and a calendar, it aims to optimize pricing, sizes, and promotional strategies. Employing tools like Python, 
+            a database system, and visualization tools, it delivers data cleaning, analysis, and interactive dashboards.
+            The outcome includes recommendations to enhance resource allocation during peak periods, ultimately boosting 
+            profitability and customer satisfaction. Overall, the project enhances decision-making for the pizza business.</p>
+        <a href="https://github.com/suman98765/pizza_sales.git" target="_blank"><button>Open GitHub Link</button></a>
+
+    </div>
+    <div class="inter">
+        <h3>Employee Attendance Analytics</h3>
+        <img src="EMP.png" alt="">
+        <p>
+        This Employee Attendance Analysis project leverages Power BI to provide comprehensive insights into attendance metrics,
+        key ratios, and trends. By collecting and integrating data from diverse sources, it aims to enhance decision-making through
+        interactive dashboards and reports. The project calculates key ratios, offers day-wise attendance analysis, implements 
+        filtering for customized exploration, and visualizes historical trends. With a focus on data-driven decision-making, efficiency
+        improvement, resource allocation, and compliance monitoring, the project empowers management and HR for optimized attendance
+        management and improved organizational performance.</p>
+        <a href="https://github.com/suman98765/Employee-attendance-analysis.git" target="_blank"><button>Open GitHub Link</button></a>
+
+    </div>
+    </div>
+</div> 
+</div>
+
+<!-- --------------------projects ended--------------- -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- -------------certificates ------------------- -->
+
+
+
+<h1 id="certifications" class="hh11">Certificates And Appreciation</h1>
+<div class="internship">
+<div class="inter">
+
+
+    <p>
+        
+    <div>
+        <span>BCG Data Science Job Simulation on Forage - July 2024</span>
+    </div>
+
+    <li>
+        Completed a customer churn analysis simulation for XYZ Analytics,
+        demonstrating advanced data analytics skills, identifying essential client
+        data and outlining a strategic investigation approach.
+    </li>
+    Conducted efficient data analysis using Python, including Pandas and NumPy.
+    Employed data visualization techniques for insightful trend interpretation.
+    <li>
+
+    </li>
+    
+    <li>
+        Completed the engineering and optimization of a random forest model,
+        achieving an 85% accuracy rate in predicting customer churn.
+    </li>
+
+
+
+    <li>
+        Completed a concise executive summary for the Associate Director, delivering
+        actionable insights for informed decision-making based on the analysis.
+     
+
+    </li>
+
+      
+    </p>
+    <a href="https://drive.google.com/file/d/1JQNMhwX7QAWvE8mS0s9eWeGGUjMn91Ek/view?usp=drive_link" target="_blank"><button>Open certificate</button></a>
+
+</div>  
+
+<div class="inter">
+
+    <p>
+        
+    <div>
+        <span>Tata Data Visualisation: Empowering Business with Effective Insights Job
+            Simulation on Forage - July 2024</span>
+    </div>
+
+    <li>
+        Completed a simulation involving creating data visualizations for Tata
+       Consultancy Services
+    </li>
+    Prepared questions for a meeting with client senior leadership
+    <li>
+
+    </li>
+    
+    <li>
+        Created visuals for data analysis to help executives with effective decision
+       making
+    </li>
+      
+    </p>
+    <a href="https://drive.google.com/file/d/1UTb0xBhVfSKd2EzNGCNRJXGOaIhnupCc/view?usp=sharing" target="_blank"><button>Open certificate</button></a>
+
+</div>  
+
+</div>  
+
+
+
+</div>
+
+
+
+
+
+
+
+<!-- <h1 id="certifications" class="reveal">Certificates</h1>
+<div class="certificates" id="certificates" >
+  
+        <img src="learnbay.jpg" alt="PYTHON">
+        
+        <img src="PYTHON.jpeg" alt="PYTHON">
+        <img src="OOPS.jpg" alt="oops">
+        <img src="Data_structures_certificate.jpg" alt="Data structures certificate">
+        <img src="ML.jpg" alt="Machine Learning">
+        
+
+</div> -->
+
+
+<!-- -------------certificates ended ------------------ -->
+
+
+
+<!-- -----------------contact details ------------------>
+
+
+
+
+
+<!-- <h1 id="contact" class="hh11">Contact Details</h1>
+    <form method="post" class="form" action="#">
+        <div>
+            <input type="text" id="your_name" placeholder="your name" name="your_name" required>
+        
+        
+            <input type="email" id="your_email" placeholder="your E-mail" name="your_email" required>
+        </div>
+        <div>
+            <input type="text" id="subject" placeholder="Subject" name="subject" required>
+            <input type="number" id="phno" placeholder="Phone number" name="phno"  required>
+        </div>
+        
+            <textarea rows="10" cols="40" id="description" placeholder="Description" name="description" required></textarea>
+        
+
+        
+            <input type="button" id="submit" value="Submit"  onclick="sendEmail()" />
+       
+    </form> -->
+
+
+
+
+<!-- ----------contact details ended ------------- -->
+
+
+
+<a href="#" class="back"><span class="material-symbols-outlined" id="head">
+    arrow_upward
+    </span></a>
+
+<!-- -----------------footer ------------------- -->
+
+    <div class="footer">
+        &copy; 2024 SUMANTH ALL RIGHTS RESERVED.
+    </div>
+    
+<!-- -----------------footer ended --------------- -->
+
+
+<!-- ----------------scripts -------------------- -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"
+      integrity="sha512-qF6akR/fsZAB4Co1QDDnUXWnaQseLGXoniuSuSlPQK6+aWhlMZcHzkasCSlnWoe+TJuudlka1/IQ01Dnhgq95g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"
+      integrity="sha512-IHDCHrefnBT3vOCsvdkMvJF/MCPz/nBauQLzJkupa4Gn4tYg5a6VGyzIrjo6QAUy3We5HFOZUlkUpP0dkgE60A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,1408 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+/* 
+.reveal{
+  position: relative;
+  transform: translateY(1500px);
+  opacity: 0;
+  background-color: transparent;
+  transition: 0.2s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.reveal{
+  position: relative;
+  transform: translateY(0);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal{
+  transform: translateY(150px);
+  opacity: 1;
+} */
+
+/* ---------------------------navbar css----------#34353b------------------------ */
+
+*{
+    /* background-color:cadetblue ; */
+    color: black;
+    font-size: 102%;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#head{
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+
+body{
+  background: rgba(255, 255, 255, 0.582);
+  /* background: linear-gradient(to left,
+  #ff6e7f,
+  linear-gradient(15deg,#dfb11ac5,#64f105d2,#03e9ddbb,#0447ffb6,#ff01f2b7,#ec0020a9)
+  #bfe9ff); */
+  /* background-color: #00DBDE;
+background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%); */
+/* background-color: #FA8BFF;
+background-image: linear-gradient(95deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%); */
+
+  overflow-x: hidden; 
+  margin: 5%;
+}
+
+
+
+
+.items{
+    flex:1;
+    align-items: center;
+    box-shadow: 10px auto;
+    text-align: center;
+    text-decoration: none;
+
+    padding: 50px;
+    cursor: pointer;
+    border: solid 1px ; 
+
+}
+
+
+#head a{
+  padding: 0.5%;
+  box-shadow: 1px 1px 1px #34353b;
+  border-radius: 5px;
+  transform: scale(0.9);
+  transition: 0.3s linear;
+ 
+}
+
+#head a:hover{
+  background-color:  #9df9ef  ;
+  color: black;
+  box-shadow: -0.3ch 0.3ch  -0.3ch 0.3ch  0.5ch whitesmoke;
+  transform: scale(1);
+
+}
+
+
+/* ---------------------------navbar css ended ----------------------------------- */
+
+
+
+
+/* home css */
+#home{
+  animation: leeft linear 0.8s;
+}
+@keyframes leeft {
+  0%{
+    transform: translateX(-800px);
+  }
+  25%{
+    transform: translateX(-600px);
+  }
+  50%{
+    transform: translateX(-400px);
+  }
+  75%{
+    transform: translateX(-200px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+  
+}
+#pic img{
+    margin-top: 7%;
+    border:1px solid;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: -0.3ch -0.3ch 2ch 2ch rgb(69, 50, 50);
+    box-shadow: 0.3ch, 0.3ch 2ch 2ch rgb(69, 50, 50);
+    height: 50%;
+    width: 25%;
+    border: none;
+    transform: scale(0.8);
+    transition: 0.2s ;
+
+
+}
+
+#pic{
+  vertical-align: center;
+}
+
+
+#pic img:hover{
+    transform: scale(1);
+}
+
+
+#about span{
+  font-size: 150%;
+  /* font-family:Arial, Helvetica, sans-serif; */
+  color:rgb(15, 0, 148);
+  animation: colorss 2s linear infinite;
+}
+@keyframes colorss {
+  25%{
+    color: red;
+    /* color:rgb(136, 0, 148); */
+  }
+  50%{
+    color:rgb(148, 0, 0);
+  }
+  75%{
+    color:rgb(0, 0, 0);
+  }
+  100%{
+    color:white;
+  }
+}
+#pic{
+    display: flex;
+    flex:1;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+
+
+#about{
+    top:10%;
+    height: 50%;
+    width: 50%;
+    flex:1;
+    text-align: center;
+    vertical-align: auto;
+    transition: all ease;
+}
+
+h1{
+  display: flex;
+  place-content: center;
+  font-size: 200%;
+  color: aqua;
+}
+
+
+
+@keyframes sidein-pic {
+  from {
+
+    transform: translateX(-20%);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateX(4%);
+  }
+}
+
+
+
+
+#about.active{
+  animation: sidein linear 0.9s 1 ;
+}
+
+
+@keyframes sidein {
+    from {
+  
+      transform: translateX(200%);
+    }
+    to {
+      /* returns the sun to its default position */
+      transform: translateX(0%);
+    }
+  }
+
+
+
+  .socials {
+    margin: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 4vw;
+  }
+  
+  .socials .line {
+    background-color: #fec86a;
+    height: 15vh;
+    width: 2.5px;
+
+
+  }
+  
+  .socials i {
+    color: black;
+    font-size: 150%; 
+  }
+
+.socials a{
+  text-decoration: none;
+  border: #9df9ef 2px solid;
+  border-radius: 50%;
+  padding: 20%;
+  transform: scale(1)
+}
+.socials a:hover{
+  background-color: yellow;
+}
+.socials a:hover i{
+  color:black;
+  background-color: yellow;
+  
+}
+  
+
+.socials a:focus{
+  transform: scale(0.9);
+}
+.socials a:focus i{
+  transform: scale(0.9);
+}
+  
+
+
+
+
+
+
+#cv{
+  display: flex;
+}
+
+.icons{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.icons a{
+    height: 15%;
+    width: 5%;
+    border-radius: 10%;
+    padding: 1%;
+    animation: down linear 3s 1 ;  
+    transition: 0.3s linear;
+    border:none;
+}
+.icons a:hover{
+  transform: scale(1.2);
+}
+.icons .icon img{
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 1ch;
+  box-shadow: none;
+  
+}
+
+
+@keyframes down {
+    from {
+  
+      transform: translateY(110%);
+    }
+    to {
+      /* returns the sun to its default position */
+      transform: translateY(0%);
+    }
+}
+
+
+
+.icons #linked{
+    background-color: blue;
+    border: transparent;
+    animation: down linear 1s 1 ;   
+}
+
+
+
+.icons #insta{
+    background-color: rgb(240, 9, 47);
+    border: transparent;
+    animation: down linear 1.5s 1 ;  
+}
+
+
+.icons #git{
+    background-color: rgb(243, 10, 243);
+    border: transparent;
+    animation: down linear 2s 1 ;  
+ 
+}
+
+
+.icons #face{
+  background-color: blue;
+  border: transparent;
+  animation: down linear 2.5s 1 ;   
+}
+
+
+
+
+
+.icons #linked:hover, #face:hover{
+    background-color: blue;
+    border: transparent;  
+    transform: scale(1.2);
+
+
+}
+
+.icons #insta:hover{
+    background-color: rgb(240, 9, 47);
+    border: transparent;
+    transform: scale(1.2);
+}
+
+
+.icons #git:hover{
+    background-color: rgb(243, 10, 243);
+    border: transparent;
+    transform: scale(1.2);
+}
+
+
+
+
+
+#name{
+  margin-left: 7%;
+}
+
+
+
+
+#name #download_style{
+  background-color: blue;
+  border: none;
+  color: #ebecef;
+  border-radius: 5px;
+  padding: 7px;
+  box-shadow: 2px 2px 15px 0.2px rgb(85, 196, 237);
+  transition: .2s;
+  transform: scale(1);
+  text-align: center;
+  width: 20%;
+  margin-left: 0%;
+
+}
+
+#download_style:hover{
+  transform: scale(1.2);
+}
+
+
+
+/*----------------------home page ended --------------------------- */
+
+
+
+
+
+
+/* -----------------------skills css-------------------------- */
+#skills{
+  display: grid ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+
+
+}
+
+
+
+.skills {
+  display: block;
+  block-size: 10%;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+#skills div.reveals{
+  
+  border:1px solid rgb(5, 183, 242);
+  padding:20%;
+  height:4rem;
+  width: 50%;
+  font-weight: 900;
+  font-weight: 1000;
+  font-size: 1.8vw;
+  border-radius: 4%;
+  text-align: center;
+  position: relative;
+  transform: scale(0.9);
+  transition: 0.3s linear;
+  border: none;
+  box-shadow: -0.3ch -0.3ch 2ch 0.1ch rgb(79, 153, 158);
+  box-shadow: 0.3ch 0.3ch 2ch 0.1ch rgb(75, 133, 135);
+  background-color:#e1b38200;
+  
+}
+
+#skills div:hover{
+  transform: scale(1);
+  background-color: greenyellow;
+  color: black;
+
+}
+
+
+
+#skills div.reveals #skillsubtitle{
+font-size: 1.2vw;
+}
+
+/*------------------ skills css ended------------------- */
+
+
+
+
+
+
+
+/* ------------Internship css -------------------------- */
+
+
+#intern{
+  padding: 3%;
+  border-left: 2px  solid yellow;
+  border-top: 2px  solid yellow;
+  border-radius: 1%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1ch;
+  box-shadow: 5px 5px 5px rgba(43, 42, 42, 0.6);
+
+}
+
+#intern:hover{
+  background-color: greenyellow;
+}
+
+
+a{
+  text-decoration: none;
+  color: blue;
+}
+
+#learnbay{
+  width: 15%;
+  height: 10%;
+}
+
+
+span{
+  font-size: 105%;
+  color:green;
+  font-weight: 900;
+}
+
+
+
+
+/* .internship{
+  width: 90%;
+
+
+}
+
+.img{
+  display: flex;
+  width: 30%;
+  height: 60%;
+  padding: 10%;
+  
+}
+
+
+.img img{
+  transform: scale(0.9);
+  transition: 0.3s linear;
+}
+
+.img img:hover{
+  transform: scale(1.2);
+  z-index: 1;
+}
+
+
+
+.internship .img img, .certificates img{
+  height: 65%;
+  width: 95%;
+  border: 1px solid #000;
+  border-radius: 1ch;
+  box-shadow: -0.3ch -0.3ch 3ch 0.5ch rgb(215, 220, 220);
+  box-shadow: 0.3ch 0.3ch 3ch 0.5ch rgb(237, 240, 240);
+}
+
+
+
+
+
+
+
+
+
+#internships{
+  display: grid ;
+  grid-template-columns: 1fr 1fr 1fr;
+
+
+
+}
+
+
+
+.internship {
+  display: flex;
+  block-size: 20%;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+
+#internships div{
+  border:1px solid rgb(5, 183, 242);
+  padding:10%;
+  width: 80%;
+  height: 50%;
+  font-size: 2vw;
+  border-radius: 2%;
+  text-align: center;
+  transform: scale(0.9);
+  transition: 0.3s linear;
+  border: none;
+  box-shadow: -0.3ch -0.3ch 2ch 0.1ch rgb(79, 153, 158);
+  box-shadow: 0.3ch 0.3ch 2ch 0.1ch rgb(75, 133, 135);
+  background-color:#e1b38200;
+  align-items: center;
+
+
+  
+}
+
+#internships div a button{
+  display:block;
+  margin-left: 10%;
+  margin-top: 10%;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid rgba(0, 255, 255, 0.704);
+  border-radius: 15px;
+  padding: 5%;
+  background-color: transparent;
+
+}
+
+#internships div a button:hover{
+  background-color: blue;
+  box-shadow: 0px 0px 10px blue;
+  box-shadow: 0.3ch 0.3ch 1ch 0.3ch blue;
+
+  border: none;
+}
+
+#internships div:hover{
+  transform: scale(1);
+ background-color: greenyellow;
+}
+.internship div .download{
+  visibility :hidden;
+  text-decoration: none;
+} */
+
+
+
+
+/* .internship .reveal .download button{
+  visibility: hidden;
+} */
+
+/* --------------intership css ended---------------- */
+
+
+
+
+/*-- --------------------End-to-end projects star--------------- --*/
+
+#end_to_end_project_title{
+
+    place-content: left;
+    font-size: 250%;
+    color:rgb(235, 38, 156);
+
+}
+
+
+#claim_image{
+  place-content: center;
+  margin-left: 30%;
+  height: 20%;
+  width: 20%;
+  padding: 1%;
+}
+
+#end_to_end{
+
+  display:flex;
+  transition: all linear 0.3s;
+  padding:10px;
+  margin-bottom: 8%;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(43, 42, 42, 0.6);
+}
+
+#end_to_end:hover{
+  background-color: greenyellow;
+}
+
+
+
+
+
+
+#end_to_end a button{
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.623);
+  color:rgb(211, 206, 206);
+  border-radius: 2%;
+  border:none;
+  padding:2%;
+  box-shadow: 3px 3px 5px blue;
+  transition:all ease 0.4s;
+
+}
+#end_to_end a button:hover{
+  transform:scale(0.9);
+}
+
+
+#flex {
+  display: flex;
+}
+
+#flex a {
+  -ms-flex: 1;  /* IE 10 */  
+  flex: 1;
+  padding: 2%;
+}
+
+/*-- --------------------End-to-end projects ended--------------- --*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -----------------Projects css -----------------*/
+.personal{
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+  gap:1rem;
+}
+.internship{
+  display:block;
+  width:98%;
+
+}
+
+h3{
+  color: red;
+  font-weight: 300;
+}
+.personal .inter, .internship .inter{
+
+  display:flex;
+  transition: all linear 0.3s;
+  padding:10px;
+  margin-bottom: 8%;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px rgba(43, 42, 42, 0.6);
+}
+.inter:hover{
+  background-color: greenyellow;
+}
+.personal .inter a{
+  margin-left: 30%;
+  width:7rem;
+  
+}
+.inter p, .inter h3, .inter a{
+  background-color:initial;
+
+}
+.inter a button{
+  width:100%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.623);
+  color:rgb(211, 206, 206);
+  border-radius: 5px;
+  border:none;
+  padding:2px;
+  box-shadow: 3px 3px 5px blue;
+  transition:all ease 0.4s;
+}
+.inter a button:hover,.inter a button:focus{
+  transform:scale(0.9);
+}
+ #inter ,#personal{
+  border:1px solid rgb(5, 183, 242);
+  border: none;
+  width: 30%;
+  border-radius: 5%;
+  transform: scale(0.9);
+  transition: 0.3s linear;  
+
+}
+
+
+
+
+#inter:hover,#personal:hover{
+  transform: scale(1);
+  background-color: #fec86a;
+  color: black;
+
+}
+
+h1{
+  display: flex;
+  place-content: center;
+  font-size: 200%;
+  color: aqua;
+}
+
+#project_title{
+  place-content: left;
+  font-size: 250%;
+  color:rgb(235, 38, 156);
+}
+/*----------------------------------- projects css ended--------------------------- */
+
+
+/* ----------certificates ---------------- */
+#certificates{
+  display: grid ;
+  grid-template-columns: 1fr 1fr 1fr;
+
+
+
+}
+#certificates img{
+  border:1px solid rgb(5, 183, 242);
+  border: none;
+  border-radius: 5%;
+  text-align: center;
+  transform: scale(1);
+  transition: 0.3s linear;
+  
+}
+
+#certificates img:hover{
+  transform: scale(1.2);
+  z-index: 1;
+  color: black;
+
+}
+/* ----------------------------------certificate css end---------------------------- */
+
+
+
+/*----------------------------------- contact css-------------------------------  */
+
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  
+}
+input, textarea{
+  border: none;
+  padding: 15px;
+  line-height: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(43, 42, 42, 0.6);
+  background-color: rgba(149, 159, 169, 0.422);
+  animation:  contact  linear 2s 1 ;
+  margin:1%;
+}
+textarea{
+  width:92%;
+}
+.form div{
+  width:95%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+
+#submit{
+  width: 30%;
+  margin: auto;
+  align-items: center;
+  background-color: green;
+  color:white;
+  font-size: 20px;
+  transition: 0.2s;
+  transform: scale(0.9);
+  padding:15px;
+  
+}
+
+#submit:hover{
+  transform: scale(1);
+}
+
+input,textarea{
+  animation:  contact  linear 2s 1 ;
+}
+
+@keyframes contact{
+  from {
+
+    transform: translateX(100%);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateX(2%);
+  }
+}
+
+
+/* -----------------contact css ended ------------------------- */
+
+
+/* -----------------------------------footer  css--------------------- */
+
+.footer{
+  text-align: center;
+  padding: 30PX;
+
+}
+.back{
+  text-decoration: none; 
+  position: fixed;
+  padding:5px;
+   bottom: 2%; 
+   right: 3%;
+   border-radius: 60%; 
+  border: 1px solid aqua;
+  
+}
+.back span{
+  color:aqua;
+}
+.back:hover span, .back:hover{
+  background-color: aqua;
+  color:black;
+}
+/* --------------------------footer css ended------------------------------------ */
+
+
+/* ------------------------mobile responsive css-------------------------------- */
+
+@media screen and (max-width:1300px) {
+
+/* 
+  #name{
+    margin-left: 7%;
+    font-size: 15px;
+  }
+  
+  
+
+  
+  #download_style{
+    margin-left: 8%;
+ 
+  }
+} */
+
+
+
+#name{
+  margin-left: 7%;
+}
+
+
+
+#download_style{
+  margin-left: 15%;
+
+}
+
+
+
+#pic img{
+height: 50%;
+width: 40%;
+}
+
+.icons a{
+height: 15%;
+width:5%;
+
+}
+
+
+}
+
+@media screen and (max-width:1000px) {
+
+/* 
+  #name{
+    margin-left: 7%;
+    font-size: 15px;
+  }
+  
+  
+
+  
+  #download_style{
+    margin-left: 5%;
+ 
+  }
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+} */
+
+
+
+#name{
+  margin-left: 7%;
+}
+
+
+
+
+#download_style{
+  margin-left: 8%;
+
+}
+
+
+
+#pic img{
+height: 50%;
+width: 40%;
+}
+
+.icons a{
+height: 15%;
+width:5%;
+
+}
+
+}
+@media screen and (max-width:850px) {
+
+/* 
+  #name{
+    margin-left: 7%;
+  
+  }
+  
+
+  #download_style{
+    margin-left: 4%;
+ 
+  }
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+} */
+
+
+#name{
+  margin-left: 7%;
+}
+
+
+
+
+#download_style{
+  margin-left: 8%;
+
+}
+
+
+
+#pic img{
+height: 50%;
+width: 40%;
+}
+
+.icons a{
+height: 15%;
+width:5%;
+
+}
+
+}
+
+@media screen and (max-width:700px) {
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #download_style{
+    margin-left: 8%;
+ 
+  }
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+}
+
+
+
+@media screen and (max-width:650px) {
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #download_style{
+    margin-left: 8%;
+ 
+  }
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+}
+
+
+@media screen and (max-width:600px) {
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #home {
+    margin: 0%;
+    background-image: url('pic.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+body{
+  font-size: 90%;
+}
+
+#pic img{
+  display: none;
+}
+
+
+
+
+
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+}
+
+@media screen and (max-width:550px) {
+
+  #name{
+    margin-left: 7%;
+  }
+  
+  #home {
+    margin: 0%;
+    background-image: url('pic.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+body{
+  font-size: 90%;
+}
+
+#pic img{
+  display: none;
+}
+
+
+
+
+
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+
+  
+  #home {
+    margin: 0%;
+    background-image: url('pic.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+body{
+  font-size: 90%;
+}
+
+#pic img{
+  display: none;
+}
+
+
+
+
+
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+}
+
+@media screen and (max-width:450px) {
+
+
+  #home {
+    margin: 0%;
+    background-image: url('pic.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+body{
+  font-size: 90%;
+}
+
+#pic img{
+  display: none;
+}
+
+
+
+
+
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+}
+
+
+
+@media screen and (max-width:428px) 
+{
+
+
+  #home {
+    margin: 0%;
+    background-image: url('pic.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+
+body{
+  font-size: 90%;
+}
+
+#pic img{
+  display: none;
+}
+
+
+
+
+
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+
+
+}
+
+
+
+@media screen and (max-device-width:237px),screen and (max-width:237px) 
+{
+
+}
+
+
+@media screen and (max-device-width:630px),screen and (max-width:630px) 
+{
+  .icons a{
+    height: 20%;
+    width: 10%;
+
+}
+
+#home {
+  margin: 0%;
+  background-image: url('pic.png');
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+
+body{
+font-size: 90%;
+}
+
+#pic img{
+display: none;
+}
+
+
+
+
+
+
+
+#name{
+  margin-left: 7%;
+}
+
+
+#pic img{
+  height: 50%;
+  width: 40%;
+}
+
+}
+
+
+
+@media screen and (max-device-width:190px),screen and (max-width:190px) 
+{
+
+
+}
+/* ----------------------------mobile responsive css ended ---------------------------------- */
