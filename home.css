@@ -35,13 +35,14 @@ html{
 *{
     /* background-color:cadetblue ; */
     color: black;
-    font-size: 102%;
+
     font-family:'Times New Roman', Times, serif;
 }
 
 #head{
     margin-left: 10%;
     display: flex;
+
     justify-content: center;
 }
 
@@ -99,7 +100,9 @@ background-image: linear-gradient(95deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%); 
 /* ---------------------------navbar css ended ----------------------------------- */
 
 
-
+#about h4{
+  text-align:  center;
+}
 
 /* home css */
 #home{
@@ -181,13 +184,14 @@ background-image: linear-gradient(95deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%); 
 
 
 #about{
-    top:10%;
+    top:5%;
     height: 50%;
     width: 50%;
     flex:1;
-    text-align: center;
+    text-align: left;
     vertical-align: auto;
     transition: all ease;
+    font-size: 100%;
 }
 
 h1{
@@ -398,13 +402,13 @@ h1{
   background-color: blue;
   border: none;
   color: #ebecef;
-  border-radius: 5px;
-  padding: 7px;
+  border-radius: 2%;
+  padding: 2%;
   box-shadow: 2px 2px 15px 0.2px rgb(85, 196, 237);
   transition: .2s;
   transform: scale(1);
   text-align: center;
-  width: 20%;
+  width: max-content;
   margin-left: 0%;
 
 }
@@ -449,9 +453,8 @@ h1{
   padding:20%;
   height:4rem;
   width: 50%;
-  font-weight: 900;
+  margin: 0%;
   font-weight: 1000;
-  font-size: 1.8vw;
   border-radius: 4%;
   text-align: center;
   position: relative;
@@ -474,7 +477,8 @@ h1{
 
 
 #skills div.reveals #skillsubtitle{
-font-size: 1.2vw;
+font-size: 60%;
+margin: 0%;
 }
 
 /*------------------ skills css ended------------------- */
@@ -664,9 +668,9 @@ span{
 
 #claim_image{
   place-content: center;
-  margin-left: 30%;
-  height: 20%;
-  width: 20%;
+  margin-left: 10%;
+  height: 25%;
+  width: 60%;
   padding: 1%;
 }
 
@@ -718,6 +722,22 @@ span{
   padding: 2%;
 }
 
+
+
+
+
+#claim_image1{
+  place-content: center;
+  margin-left: 30%;
+  height: 20%;
+  width: 20%;
+  padding: 1%;
+}
+
+
+
+
+
 /*-- --------------------End-to-end projects ended--------------- --*/
 
 
@@ -755,7 +775,8 @@ span{
 
 h3{
   color: red;
-  font-weight: 300;
+  font-weight: 900;
+  font-size: 200%;
 }
 .personal .inter, .internship .inter{
 
@@ -919,6 +940,23 @@ input,textarea{
     transform: translateX(2%);
   }
 }
+
+
+
+
+
+
+
+
+#contacts {
+  border: 1px solid yellow;
+  background-color: #ebecef;
+  height: 10%;
+  width: 100%;
+}
+
+
+
 
 
 /* -----------------contact css ended ------------------------- */
@@ -1148,17 +1186,9 @@ width:5%;
   }
   
 
-  #home {
-    margin: 0%;
-    background-image: url('pic.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
 
-body{
-  font-size: 90%;
-}
+
+
 
 #pic img{
   display: none;
@@ -1193,16 +1223,150 @@ body{
     margin-left: 7%;
   }
   
-  #home {
-    margin: 0%;
-    background-image: url('pic.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
+
+
+#skills div.reveals{
+
+  font-size: 65%;
+  
 }
 
+
+#skills div.reveals #skillsubtitle{
+  font-size: 60%;
+  padding: 10%;
+  }
+
+
+
+#pic img{
+  display: none;
+}
+
+
+
+
+
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+}
+
+@media screen and (max-width:500px) {
+
+  
+
+
+#pic img{
+  display: none;
+}
+
+
+
+
+
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+}
+
+@media screen and (max-width:450px) {
+
+
+
+
+
+
+#pic img{
+  display: none;
+}
+
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+}
+
+
+
+@media screen and (max-width:428px), screen and (min-width: 237)
+{
+
+
+
+
 body{
-  font-size: 90%;
+  font-size: 70%;
+}
+
+#pic img{
+  display: none;
+}
+
+
+
+
+
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+  #pic img{
+    height: 50%;
+    width: 40%;
+  }
+
+
+
+}
+
+
+
+@media screen and (max-device-width:290px),screen and (max-width:290px) 
+{
+
+
+  #name{
+    margin-left: 7%;
+  }
+  
+
+body{
+  font-size: 60%;
 }
 
 #pic img{
@@ -1235,94 +1399,6 @@ body{
 @media screen and (max-width:500px) {
 
   
-  #home {
-    margin: 0%;
-    background-image: url('pic.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
-
-body{
-  font-size: 90%;
-}
-
-#pic img{
-  display: none;
-}
-
-
-
-
-
-
-
-  #name{
-    margin-left: 7%;
-  }
-  
-
-  #pic img{
-    height: 50%;
-    width: 40%;
-  }
-
-}
-
-@media screen and (max-width:450px) {
-
-
-  #home {
-    margin: 0%;
-    background-image: url('pic.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
-
-body{
-  font-size: 90%;
-}
-
-#pic img{
-  display: none;
-}
-
-
-
-
-
-
-
-  #name{
-    margin-left: 7%;
-  }
-  
-
-  #pic img{
-    height: 50%;
-    width: 40%;
-  }
-
-}
-
-
-
-@media screen and (max-width:428px) 
-{
-
-
-  #home {
-    margin: 0%;
-    background-image: url('pic.png');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-}
-
-body{
-  font-size: 90%;
-}
 
 #pic img{
   display: none;
@@ -1346,12 +1422,6 @@ body{
 
 
 
-}
-
-
-
-@media screen and (max-device-width:237px),screen and (max-width:237px) 
-{
 
 }
 
@@ -1364,17 +1434,9 @@ body{
 
 }
 
-#home {
-  margin: 0%;
-  background-image: url('pic.png');
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: cover;
-}
 
-body{
-font-size: 90%;
-}
+
+
 
 #pic img{
 display: none;
