@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Asap&display=swap');
 html{
   scroll-behavior: smooth;
@@ -8,25 +7,21 @@ html{
 
 
 /* General reset for body to center content */
-body {
-  margin: 0; 
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9; /* Optional background color */
-}
+
 
 /* Header styles */
-#head {
+/* #head {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
   padding: 1rem 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Navigation link styles */
-#head .items {
-  color: #fff;
+/* #head a {
+  color: #fff; 
   text-decoration: none;
   margin: 0 15px;
   padding: 10px 20px;
@@ -34,16 +29,16 @@ body {
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-}
+} */
 
-#head .items:hover {
+/* #head a:hover {
   background-color: #777;
   transform: translateY(-2px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
+} */
 
 /* Responsive design for tablets and mobile devices */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   #head {
       flex-direction: column;
       align-items: flex-start;
@@ -55,15 +50,149 @@ body {
       width: 100%;
       text-align: center;
   }
-}
+} */
 
 /* Optional media query for smaller mobile devices */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   #head .items {
       font-size: 14px;
       padding: 8px 16px;
   }
+}  */
+
+
+
+/* Ensure the container spans the full width of the page */
+.items {
+  display: flex;
+  justify-content: space-around; /* Ensures equal spacing between items */
+  align-items: center; /* Vertically centers the content */
+  background-color: #333;
+  padding: 1rem 0;
+  margin: 0.1rem auto ; /* Removes any default margins */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensures it covers the full page width */
+  box-sizing: border-box; /* Ensures padding and borders are included in width */
 }
+
+/* Navigation link styles */
+.items a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 15px;
+  display: block;
+  background-color: #333;
+  transition: background 0.3s ease-in-out;
+  border-radius: 5%; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Optional: Add hover effect for links */
+.items a:hover {
+  background-color: #555;
+}
+
+
+
+/* #head {
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+#head a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  transition: background 0.3s ease-in-out;
+} */
+/* 
+#head a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+} */
+
+.items {
+  display: none; /* Hidden by default for mobile */
+}
+
+.toggle-btn {
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  background-color: #333;
+  padding: 10px 15px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease-in-out;
+
+}
+
+.nav-active .items {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 768px) {
+  .toggle-btn {
+      display: none; /* Hide the hamburger icon on larger screens */
+  }
+
+  .items {
+      display: block; /* Always show navigation links */
+  }
+
+  #head a {
+      display: inline-block; /* Inline for desktop view */
+  }
+}
+
+#animatedElement {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+#animatedElement.animate-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-animate] {
+    opacity: 0;
+    transform: translateY(40%);
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+[data-animate].animate-up {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Home Section */
 #home {
@@ -898,4 +1027,25 @@ footer {
   .contact-details {
       font-size: 16px;
   }
+}
+
+
+
+.back{
+  text-decoration: none; 
+  position: fixed;
+  padding:5px;
+   bottom: 2%; 
+   right: 3%;
+   border-radius: 50%; 
+  border: 3px solid blue;
+  
+}
+.back span{
+  color: blue;
+}
+.back:hover span, .back:hover{
+  background-color: blue;
+  color:white;
+  border: white;
 }
