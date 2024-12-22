@@ -154,6 +154,21 @@ html{
   }
 }
 
+
+@media (min-width:  480px) {
+  .toggle-btn {
+      display: none; /* Hide the hamburger icon on larger screens */
+  }
+
+  .items {
+      display: block; /* Always show navigation links */
+  }
+
+  #head a {
+      display: inline-block; /* Inline for desktop view */
+  }
+}
+
 #animatedElement {
     position: relative;
     opacity: 0;
